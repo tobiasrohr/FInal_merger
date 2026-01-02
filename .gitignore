@@ -1,0 +1,16 @@
+.DS_Store
+.env
+.env.*
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+
+# Generated outputs / exports
+output/
+board_merge/output/
+board_merge/logs/
+
+# Editor / tooling
+.vscode/
+.cursor/

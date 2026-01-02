@@ -1,0 +1,1120 @@
+# Jobs Mapping Vorschlag (HR4You -> Jobs)
+# Quelle: dropdown_mktvs1mm, Ziel: dropdown_mkws141v
+# Hinweis: merge_strategy "overwrite" da Zielspalte leer ist.
+# Confidence-Bands: HIGH>=90%, MEDIUM>=75%, LOW>=60%, VERY_LOW<60% (bitte prüfen).
+
+mappings:
+  # --- HIGH ---
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Anlageberater"  # 96.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Anlagenberater"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Werkstudent"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Werkstudent"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Anlagenmechaniker"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Anlagenmechaniker"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Speditionskaufmann"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Speditionskaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Brand Manager"  # 96.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Brandmanager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Leiter Buchhaltung"  # 94.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Leiter - Buchhaltung"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Projektmanager"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Projektmanager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Zahnmedizinische Fachangestellte (ZFA)"  # 97.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Zahnmedizinischer Fachangestellter (ZFA)"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Bankkaufmann"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Bankkaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Supply Chain Manager"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Supply Chain Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Facility Manager"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Facility Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Außendienstmitarbeiter"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Außendienstmitarbeiter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Botenfahrer"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Botenfahrer"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Medizinisch Technischer Assistent (MTA)"  # 97.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Medizinisch-Technischer Assistent (MTA)"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Hausmeister"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Hausmeister"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Callcenteragent Outbound"  # 92.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Call Center Agent - Outbound"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Fremdsprachenkorrespondent"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Fremdsprachenkorrespondent"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Sachbearbeiter Forderungsmanagement"  # 97.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Forderungsmanagement"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Change Manager"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Change Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Architektur"  # 90.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Architekt"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Biologisch technischer Assistent (BTA)"  # 97.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Biologisch-Technischer Assistent (BTA)"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Kommissionierer"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Kommissionierer"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Technischer Sachbearbeiter"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Technischer Sachbearbeiter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Flugbegleiter"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Flugbegleiter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Leiter Vertrieb"  # 93.8%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Leiter - Vertrieb"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Patentanwaltsfachangestellte"  # 98.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Patentanwaltsfachangestellter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Online Marketing Manager"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Online Marketing Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Hostess"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Hostess"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Sales Manager"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sales Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Prozessmanager"  # 96.6%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Prozess Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Treasury Manager"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Treasury Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Chemisch technischer Assistent (CTA)"  # 97.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Chemisch-Technischer Assistent (CTA)"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Lagerist"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Lagerist"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Versicherungskaufmann"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Versicherungskaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Hotelkaufmann"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Hotelkaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "PR Berater"  # 90.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "PR-Berater"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Biologie"  # 93.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Biologe"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Montage"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Montage"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Automobilkaufmann"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Automobilkaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Sachbearbeiter Marketing"  # 96.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Marketing"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Produktionsmitarbeiter"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Produktionsmitarbeiter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Automobilverkäufer"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Automobilverkäufer"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Social Media Manager"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Social Media Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Business Analyst"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Business Analyst"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "IT Techniker"  # 92.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "IT - Techniker"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Elektrotechnik"  # 93.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Elektrotechniker"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Security Mitarbeiter"  # 93.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "IT Security Mitarbeiter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Schlosser"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Schlosser"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Fuhrparkmanager"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Fuhrparkmanager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Vermögensberater"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Vermögensberater"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Controller"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Controller"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Schweißer"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Schweißer"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Notarfachangestellte"  # 97.6%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Notarfachangestellter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "KFZ Mechaniker"  # 90.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "KFZ Mechatroniker"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Elektrotechniker"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Elektrotechniker"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Vertriebsinnendienst"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Vertriebsinnendienst"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Immobilienkaufmann"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Immobilienkaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Rechtsanwalt"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Rechtsanwalt"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Veranstaltungstechniker"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Veranstaltungstechniker"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Fachinformatiker Anwendungsentwicklung"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Fachinformatiker Anwendungsentwicklung"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Mechatronik"  # 91.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Mechatroniker"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Rechtsanwaltsfachangestellte"  # 98.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Rechtsanwaltsfachangestellter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Immobilienmakler"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Immobilienmakler"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Leiter Einkauf"  # 93.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Leiter - Einkauf"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Fitnesskaufmann"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Fitnesskaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Callcenteragent Inbound"  # 92.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Call Center Agent - Inbound"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Leiter Personal"  # 93.8%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Leiter - Personal"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Gesundheits- und Krankenpfleger"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Gesundheits- und Krankenpfleger"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Personalentwickler"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Personalentwickler"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Sachbearbeiter Einkauf"  # 95.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Einkauf"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Bürokaufmann"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Bürokaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Steuerberater"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Steuerberater"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Personalreferent"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Personalreferent"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Datenerfasser"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Datenerfasser"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Steuerfachangestellte"  # 97.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Steuerfachangestellter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Bilanzbuchhalter"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Bilanzbuchhalter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Leiter Kundenservice"  # 95.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Leiter - Kundenservice"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "2nd Level Support"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "2nd Level Support"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Wirtschaftsprüfer"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Wirtschaftsprüfer"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "3rd Level Support"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "3rd Level Support"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "IT Projektmanager"  # 90.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Projektmanager - IT"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Scanner"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Scanner"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "WEG Verwalter"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "WEG Verwalter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Groß- & Außenhandelskaufmann"  # 93.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Groß- und Außenhandelskaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Verwaltungsfachangestellter"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Verwaltungsfachangestellter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Coronastester"  # 96.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Coronatester"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Medizinische Fachangestellte (MFA)"  # 97.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Medizinischer Fachangestellter (MFA)"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Industriekaufmann"  # 100.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Industriekaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Operationstechnische Assistent (OTA)"  # 98.6%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Operationstechnischer Assistent (OTA)"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Sachbearbeiter Logistik"  # 95.8%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Logistik"
+    merge_strategy: "overwrite"
+
+  # --- MEDIUM ---
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Bauleiter"  # 80.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Ingenieur - Bau"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Sekretärin"  # 88.9%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sekretär"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Senior Projektmanager"  # 80.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Projektmanager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Lohnbuchhalter"  # 80.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Buchhalter - Lohn"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Mietenbuchhalter"  # 75.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Buchhalter - WEG"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Key Account Manager"  # 88.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Account Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Patentanwalt"  # 75.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Patentanwalt"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Lean Manager"  # 80.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Prozess Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Sachbearbeiter Rechnungsprüfung"  # 80.6%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Rechnungswesen"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Küchenhilfe"  # 87.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Küchenhelfer"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "SAP Consultant"  # 86.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sales Consultant"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Compliance Manager"  # 75.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Recht"
+    merge_strategy: "overwrite"
+
+
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Firmenkundenberater"  # 84.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Firmenkundenberater - Bank"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Verkaufssachbearbeiter"  # 77.8%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Vertrieb"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Night Manager"  # 75.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Nachtportier"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Assistenz Controlling"  # 79.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Assistent - Controller"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Pharmazeutisch kaufmännische Angestellte (PKA)"  # 83.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Pharmazeutisch-kaufmännische Assisent (PKA)"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Privatkundenberater"  # 84.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Privatkundenberater - Bank"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Pharmazeutisch technische Angestellte (PTA)"  # 84.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Pharmazeutisch-Technischer Assistent (PTA)"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Juristischer Sachbearbeiter"  # 83.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Recht"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Veranstaltungskaufmann"  # 75.5%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Eventmanager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Systemadministrator"  # 88.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "IT - Systemadministrator"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Finanzcontroller"  # 76.9%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Controller - Finanzen"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Assistent Personalwesen"  # 83.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Assistent - Personal"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Java Entwickler"  # 75.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Softwareentwickler - Java"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "SAP Entwickler"  # 77.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "SAP Applikationsexperte"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Alleinbuchhalter"  # 75.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Buchhalter - Allein"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Einzelhandelskaufmann / Verkäufer"  # 77.8%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Einzelhandelskaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Auftragssachbearbeiter"  # 77.8%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Vertrieb"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Assistenz Steuern"  # 88.9%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Assistent - Steuern"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Softwareentwickler"  # 83.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Softwareentwickler - Java"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Anlagenbuchhalter"  # 77.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Buchhalter - Anlagen"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Web Entwickler"  # 77.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Informatik - Webentwickler"
+    merge_strategy: "overwrite"
+
+
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Assistent Gesundheitswesen"  # 83.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Assistent - Gesundheit"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Nebenkostenabrechner"  # 79.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Betriebskostenabrechner"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Personalsachbearbeiter"  # 77.8%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Technischer Einkäufer"  # 82.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Technischer Helfer"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Servicekraft Gastronomie"  # 75.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Servicemitarbeiter - Gastronomie"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Finanzbuchhalter"  # 87.5%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Bilanzbuchhalter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Coronahelfer"  # 75.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Coronatester"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Tourismuskauffrau"  # 82.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Tourismuskaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Konzenbuchhalter"  # 75.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Buchhalter - Konzern"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Junior Projektmanager"  # 80.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Projektmanager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Sachbearbeiter Import"  # 81.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbieter - Logistik"
+    merge_strategy: "overwrite"
+
+  # --- LOW (bitte genau prüfen) ---
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Projektassistent"  # 60.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Projektmanager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Tourismus"  # 69.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Tourismuskaufmann"
+    merge_strategy: "overwrite"
+
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Soziale Arbeit"  # 64.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: ""
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Cash Management"  # 64.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sales Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Marketingassistent"  # 62.9%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Marketing Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Technischer Projektmanager"  # 70.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Projektmanager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Teamassistent"  # 62.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Assistent - Team"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Leasing"  # 66.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Leasingberater"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Biologielaborant"  # 60.9%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Biologe"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Briefzusteller"  # 71.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Paketzusteller"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Marketingkaufmann"  # 70.6%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Marketing Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Empfangsassistenz"  # 66.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Empfangsmitarbeiter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Technischer Objektmanager"  # 69.8%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Objektverwalter - Technisch"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Mediengestalter"  # 63.8%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Mediengestalter | Grafikdesigner"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Risikomanager"  # 74.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: ""
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Chemielaborant"  # 61.5%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Labormitarbeiter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Sozialversicherungsfachangestellter"  # 74.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Verwaltungsfachangestellter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Technischer Vertrieb"  # 73.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Vertrieb"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Labortechniker / Laborassistent"  # 61.5%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Labormitarbeiter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Absolvent Controlling"  # 73.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Controller"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Informatikkaufmann"  # 68.6%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "IT - Techniker"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Desktop Administrator"  # 71.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Netzwerkadministrator"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Chemie"  # 66.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Chemisch-Technischer Assistent (CTA)"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Vertriebsassistent"  # 63.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Vertriebsinnendienst"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Informatik"  # 69.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Leiter - Informatik"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Immobilienassistent"  # 72.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Immobilienberater"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Maschinenbau"  # 66.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Ingenieur - Bau"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Assistenz Beschaffungswesen"  # 63.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Einkauf"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Serviceberater"  # 74.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Customer Service Specialist"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Projektcontroller"  # 74.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Controller - Projekt"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Rechtsfachwirt"  # 69.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Recht"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Wirtschaftsingenieurwesen"  # 61.9%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Ingenieur - Wirtschaft"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Operativer Einkäufer"  # 62.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Einkäufer - Operativ"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Kaufmännischer Objektmanager"  # 61.9%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Objektverwalter - Kaufmännisch"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Filialleiter / Store Manager"  # 68.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Filialleiter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Senior Controller"  # 74.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Controller"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Marketing & Design"  # 62.9%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Marketing Manager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Strategischer Einkäufer"  # 63.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Einkäufer - Strategisch"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Steuerfachwirt"  # 61.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Assistent - Steuern"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Personal"  # 66.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Personalreferent"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Debitorenbuchhalter"  # 74.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Buchhalter - Debitoren"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Helfer Büroverwaltung"  # 64.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Helfer - Büro"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Objektverwalter"  # 71.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "WEG Verwalter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Vertriebscontroller"  # 69.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Controller - Vertrieb"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Poststelle"  # 66.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Paketzusteller"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Sachbearbeiter Mietverwaltung"  # 72.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Immobilien"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Wirtschaftsprüfungsassistent"  # 71.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Assistent - Wirtschaftsprüfung"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Fremdsprachsekretärin"  # 68.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Fremdsprachenkorrespondent"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Assistenzarzt"  # 68.8%
+    target_column_id: "dropdown_mkws141v"
+    target_value: ""
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Kreditorenbuchhalter"  # 66.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Buchhalter - Kreditoren"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Partnerassistent"  # 62.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Assistent - Partner"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Laborhelfer"  # 60.9%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Labormitarbeiter"
+    merge_strategy: "overwrite"
+
+  # --- VERY_LOW (stark manuell prüfen!) ---
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Rettungssanitäter"  # 55.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Veranstaltungstechniker"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Medizinstudium"  # 50.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Speditionskaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Journalist"  # 54.5%
+    target_column_id: "dropdown_mkws141v"
+    target_value: ""
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "VWL"  # 37.5%
+    target_column_id: "dropdown_mkws141v"
+    target_value: ""
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Politik"  # 50.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: ""
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Ausbildung Patentingenieur"  # 51.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Ingenieur"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Sport- und Gesundheitswissenschaften"  # 48.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Assistent - Gesundheit"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Bau"  # 42.9%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Bauarbeiter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "IT Spezialist"  # 55.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "IT - Techniker"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Geo"  # 40.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: ""
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Übersetzer / Dolmetscher"  # 58.8%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Übersetzer"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Umwelt"  # 50.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Ingenieur - Umwelt"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Scrum Master"  # 58.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Projektmanager"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Jurist"  # 57.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Jurist - 1. Examen"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Sales & Support – Support"  # 52.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Customer Service Specialist"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "HR Generalist"  # 57.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Personalreferent"
+    merge_strategy: "overwrite"
+
+
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Wirtschaftswissenschaften"  # 57.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Wirtschaftsprüfer"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Physik & Mathematik"  # 45.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: ""
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Automobil Vermietassistent"  # 59.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Fuhrparkmanagement"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Kaufmann für Grundstück und Wohnungswirtschaft"  # 41.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Immobilien"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "BWL"  # 40.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: ""
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Physiotherapeut"  # 46.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Fitnesskaufmann"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Jura"  # 36.4%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Jurist - 1. Examen"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Mieterbetreuer"  # 59.3%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Objektverwalter - Kaufmännisch"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Schalterauskunft"  # 57.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Empfangsmitarbeiter"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Kaufmann im Gesundheitswesen"  # 56.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Gesundheit"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Bereichsleitungsassistent"  # 54.5%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Assistent - Geschäftsführung (GFA)"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Arzt"  # 50.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: ""
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Disponent Güterverkehr"  # 58.1%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Disponent"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Abiturient"  # 53.8%
+    target_column_id: "dropdown_mkws141v"
+    target_value: ""
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Geschäftsführungsassistent"  # 56.7%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Assistent - Geschäftsführung (GFA)"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Impftelefonie"  # 56.0%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Customer Service Specialist"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Export"  # 46.2%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Logistik"
+    merge_strategy: "overwrite"
+  - source_column_id: "dropdown_mktvs1mm"
+    source_value: "Zoll"  # 42.9%
+    target_column_id: "dropdown_mkws141v"
+    target_value: "Sachbearbeiter - Logistik"
+    merge_strategy: "overwrite"

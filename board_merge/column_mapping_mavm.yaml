@@ -1,0 +1,221 @@
+mappings:
+- source_column_id: name
+  target_column_id: name
+  merge_strategy: only_if_empty
+- source_column_id: status_130
+  target_column_id: status_130
+  merge_strategy: only_if_empty
+- source_column_id: status1
+  target_column_id: status1
+  merge_strategy: only_if_empty
+- source_column_id: status0
+  target_column_id: status0
+  merge_strategy: only_if_empty
+- source_column_id: personen
+  target_column_id: personen
+  merge_strategy: only_if_empty
+- source_column_id: datum_1
+  target_column_id: datum_1
+  merge_strategy: only_if_empty
+- source_column_id: datum60
+  target_column_id: datum60
+  merge_strategy: only_if_empty
+- source_column_id: standort
+  target_column_id: standort
+  merge_strategy: only_if_empty
+- source_column_id: zahlen
+  target_column_id: zahlen
+  merge_strategy: only_if_empty
+  transform: calculate_salary
+  source_yearly_column_id: text_mktvfr1y
+  source_monthly_column_id: text_mktvsm8z
+- source_column_id: drop_down4
+  target_column_id: drop_down4
+  merge_strategy: only_if_empty
+  transform: gender_to_salutation
+  source_gender_column_id: dropdown_mktvnt0e
+- source_column_id: dup__of_nachname
+  target_column_id: dup__of_nachname
+  merge_strategy: only_if_empty
+- source_column_id: text
+  target_column_id: text
+  merge_strategy: only_if_empty
+- source_column_id: phone_mksmhggy
+  target_column_id: phone_mksm3ep7
+  merge_strategy: only_if_empty
+- source_column_id: phone_mkv18epc
+  target_column_id: telefon
+  merge_strategy: only_if_empty
+- source_column_id: e_mail
+  target_column_id: e_mail
+  merge_strategy: only_if_empty
+- source_column_id: datum6
+  target_column_id: datum6
+  merge_strategy: only_if_empty
+- source_column_id: text9
+  target_column_id: text9
+  merge_strategy: only_if_empty
+- source_column_id: drop_down_1
+  target_column_id: drop_down_1
+  merge_strategy: only_if_empty
+- source_column_id: drop_down_15
+  target_column_id: drop_down_15
+  merge_strategy: only_if_empty
+- source_column_id: drop_down6
+  target_column_id: drop_down6
+  merge_strategy: only_if_empty
+- source_column_id: status__1
+  target_column_id: status__1
+  merge_strategy: only_if_empty
+- source_column_id: dropdown
+  target_column_id: dropdown
+  merge_strategy: only_if_empty
+- source_column_id: drop_down_2
+  target_column_id: drop_down_2
+  merge_strategy: only_if_empty
+- source_column_id: drop_down_12
+  target_column_id: drop_down_12
+  merge_strategy: only_if_empty
+- source_column_id: status_1
+  target_column_id: status_1
+  merge_strategy: only_if_empty
+- source_column_id: color
+  target_column_id: color
+  merge_strategy: only_if_empty
+- source_column_id: datei
+  target_column_id: datei
+  merge_strategy: only_if_empty
+- source_column_id: file_mkrbec7v
+  target_column_id: file_mkrbdw1q
+  merge_strategy: only_if_empty
+- source_column_id: datei_1__1
+  target_column_id: datei_1__1
+  merge_strategy: only_if_empty
+- source_column_id: link2
+  target_column_id: link2
+  merge_strategy: only_if_empty
+- source_column_id: link92
+  target_column_id: link92
+  merge_strategy: only_if_empty
+- source_column_id: link_1
+  target_column_id: link_1
+  merge_strategy: only_if_empty
+- source_column_id: link_19
+  target_column_id: link_19
+  merge_strategy: only_if_empty
+- source_column_id: color3
+  target_column_id: color3
+  merge_strategy: only_if_empty
+- source_column_id: status_13
+  target_column_id: status_13
+  merge_strategy: only_if_empty
+- source_column_id: text4__1
+  target_column_id: text4__1
+  merge_strategy: only_if_empty
+- source_column_id: drop_down63
+  target_column_id: drop_down63
+  merge_strategy: only_if_empty
+- source_column_id: link__1
+  target_column_id: link__1
+  merge_strategy: only_if_empty
+- source_column_id: date_mkpe4j1
+  target_column_id: date_mkz7ydxr
+  merge_strategy: only_if_empty
+- source_column_id: date_mkpe7vkr
+  target_column_id: date_mkpecb5q
+  merge_strategy: only_if_empty
+- source_column_id: file_mkt897mp
+  target_column_id: file_mkz7v2xk
+  merge_strategy: only_if_empty
+- source_column_id: dropdown_mkw47p9
+  target_column_id: dropdown_mktze69n
+  merge_strategy: only_if_empty
+- source_column_id: dropdown_mkws141v
+  target_column_id: dropdown_mkw4jfd7
+  merge_strategy: only_if_empty
+- source_column_id: link_mky819zm
+  target_column_id: link_mkyat06n
+  merge_strategy: only_if_empty
+- source_column_id: board_relation_mkp5a6pe
+  target_column_id: dropdown_mktzhdsg
+  merge_strategy: only_if_empty
+- source_column_id: drop_down_14
+  target_column_id: dropdown_mkz7ndpz
+  merge_strategy: only_if_empty
+  transform: map_hours
+- source_column_id: dropdown_mktvcvrv
+  target_column_id: dropdown_mkz7jhd2
+  merge_strategy: only_if_empty
+  transform: map_languages
+- source_column_id: dropdown_mktvv9h8
+  target_column_id: dropdown_mkz7p8e1
+  merge_strategy: only_if_empty
+- source_column_id: text_mkv6jasp
+  target_column_id: numeric_mkz7a152
+  merge_strategy: only_if_empty
+  transform: parse_number
+- source_column_id: text_mktv4e5t
+  target_column_id: dropdown_mkz7vscr
+  merge_strategy: only_if_empty
+  transform: map_country
+skip_columns:
+- color_mktve1f6
+transformations:
+  parse_salary:
+    description: Parse salary from text format (e.g., '€ 45.000' -> 45000)
+    function: parse_salary_text_to_number
+  map_hours:
+    description: Map hours from HR4You format to target format
+    value_mapping:
+      Teilzeit (25 - 35 Stunden): Teilzeit (25 - 35h)
+      Vollzeit (35 - 40 Stunden): Vollzeit (35 - 40h)
+      Teilzeit (15 - 25 Stunden): Teilzeit (15 - 25h)
+  map_languages:
+    description: Map languages from HR4You format to target format
+    value_mapping:
+      Dänisch: Dänisch
+      Deutsch: Deutsch
+      Kroatisch: Kroatisch
+      Spanisch: Spanisch
+      Norwegisch: Norwegisch
+      Bulgarisch: Bulgarisch
+      Rumänisch: Rumänisch
+      Tschechisch: Tschechisch
+      Polnisch: Polnisch
+      Schwedisch: Schwedisch
+      Englisch: Englisch
+      Slowenisch: Slowenisch
+      Bosnisch: Bosnisch
+      Ukrainisch: Ukrainisch
+      Griechisch: Griechisch
+      Französisch: Französisch
+      Albanisch: Albanisch
+      Russisch: Russisch
+      Japanisch: Japanisch
+      Slowakisch: Slowakisch
+      Niederländisch: Niederländisch
+      Türkisch: Türkisch
+      Portugiesisch: Portugiesisch
+      Serbisch: Serbisch
+      Ungarisch: Ungarisch
+      Italienisch: Italienisch
+      Arabisch: Arabisch
+      Indisch: Hindi
+      Serbo-Kroatisch: Serbisch
+      Chinesisch: Chinesisch / Mandarin
+      Thailändisch: Thai
+  parse_number:
+    description: Parse number from text field
+    function: parse_text_to_number
+  map_country:
+    description: Map country names from text to dropdown labels
+    value_mapping:
+      deutschland: Deutschland
+      österreich: Österreich
+      schweiz: Schweiz
+      türkei: Türkei
+      usa: USA
+      großbritanien: Großbritannien
+      großbritannien: Großbritannien
+      tschechische republik: Tschechien
+      madzedonien: Mazedonien

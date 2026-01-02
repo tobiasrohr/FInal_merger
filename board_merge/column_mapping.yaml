@@ -1,0 +1,365 @@
+# Column Mapping Configuration
+# Auto-generated from column_comparison.csv
+# Maps columns from source board (9661290405) to target board (3567618324)
+
+mappings:
+  # name
+  - source_column_id: "name"
+    target_column_id: "name"
+    merge_strategy: "only_if_empty"
+
+  # link
+  - source_column_id: "link"
+    target_column_id: "link"
+    merge_strategy: "only_if_empty"
+
+  # status
+  - source_column_id: "status"
+    target_column_id: "status"
+    merge_strategy: "only_if_empty"
+
+  # status_130
+  - source_column_id: "status_130"
+    target_column_id: "status_130"
+    merge_strategy: "only_if_empty"
+
+  # status1
+  - source_column_id: "status1"
+    target_column_id: "status1"
+    merge_strategy: "only_if_empty"
+
+  # status0
+  - source_column_id: "status0"
+    target_column_id: "status0"
+    merge_strategy: "only_if_empty"
+
+  # personen
+  - source_column_id: "personen"
+    target_column_id: "personen"
+    merge_strategy: "only_if_empty"
+
+  # datum_1
+  - source_column_id: "datum_1"
+    target_column_id: "datum_1"
+    merge_strategy: "only_if_empty"
+
+  # datum60
+  - source_column_id: "datum60"
+    target_column_id: "datum60"
+    merge_strategy: "only_if_empty"
+
+  # standort
+  - source_column_id: "standort"
+    target_column_id: "standort"
+    merge_strategy: "only_if_empty"
+
+  # zahlen (Gehalt - berechnet aus Jahresbrutto oder Monatsnetto)
+  - source_column_id: "zahlen"  # Fallback: falls direkt vorhanden
+    source_yearly_column_id: "text_mktvfr1y"  # Jahresbruttogehalt
+    source_monthly_column_id: "text_mktvsm8z"  # Monatsnettogehalt
+    target_column_id: "zahlen"
+    transform: "calculate_salary"
+    merge_strategy: "only_if_empty"
+
+  # drop_down4 (Anrede - berechnet aus Geschlecht)
+  - source_column_id: "drop_down4"  # Fallback: falls direkt vorhanden
+    source_gender_column_id: "dropdown_mktvnt0e"  # Geschlecht
+    target_column_id: "drop_down4"
+    transform: "gender_to_salutation"
+    merge_strategy: "only_if_empty"
+
+  # dup__of_nachname
+  - source_column_id: "dup__of_nachname"
+    target_column_id: "dup__of_nachname"
+    merge_strategy: "only_if_empty"
+
+  # text
+  - source_column_id: "text"
+    target_column_id: "text"
+    merge_strategy: "only_if_empty"
+
+  # Title match: ☎️ Festnetz
+  - source_column_id: "phone_mksmhggy"
+    target_column_id: "phone_mksmcx8f"
+    merge_strategy: "only_if_empty"
+
+  # Title match: 📱 Telefon
+  - source_column_id: "phone_mkv18epc"
+    target_column_id: "telefon"
+    merge_strategy: "only_if_empty"
+
+  # e_mail
+  - source_column_id: "e_mail"
+    target_column_id: "e_mail"
+    merge_strategy: "only_if_empty"
+
+  # datum6
+  - source_column_id: "datum6"
+    target_column_id: "datum6"
+    merge_strategy: "only_if_empty"
+
+  # text9
+  - source_column_id: "text9"
+    target_column_id: "text9"
+    merge_strategy: "only_if_empty"
+
+  # drop_down_1
+  - source_column_id: "drop_down_1"
+    target_column_id: "drop_down_1"
+    merge_strategy: "only_if_empty"
+
+  # drop_down_15
+  - source_column_id: "drop_down_15"
+    target_column_id: "drop_down_15"
+    merge_strategy: "only_if_empty"
+
+  # drop_down6
+  - source_column_id: "drop_down6"
+    target_column_id: "drop_down6"
+    merge_strategy: "only_if_empty"
+
+  # Title match: Agentur
+  - source_column_id: "status__1"
+    target_column_id: "status0__1"
+    merge_strategy: "only_if_empty"
+
+  # dropdown
+  - source_column_id: "dropdown"
+    target_column_id: "dropdown"
+    merge_strategy: "only_if_empty"
+
+  # drop_down_2
+  - source_column_id: "drop_down_2"
+    target_column_id: "drop_down_2"
+    merge_strategy: "only_if_empty"
+
+  # drop_down_12
+  - source_column_id: "drop_down_12"
+    target_column_id: "drop_down_12"
+    merge_strategy: "only_if_empty"
+
+  # status_1
+  - source_column_id: "status_1"
+    target_column_id: "status_1"
+    merge_strategy: "only_if_empty"
+
+  # color
+  - source_column_id: "color"
+    target_column_id: "color"
+    merge_strategy: "only_if_empty"
+
+  # datei
+  - source_column_id: "datei"
+    target_column_id: "datei"
+    merge_strategy: "only_if_empty"
+
+  # Title match: 🗂️ Anschreiben
+  - source_column_id: "file_mkrbec7v"
+    target_column_id: "file_mkpn71es"
+    merge_strategy: "only_if_empty"
+
+  # datei_1__1
+  - source_column_id: "datei_1__1"
+    target_column_id: "datei_1__1"
+    merge_strategy: "only_if_empty"
+
+  # link2
+  - source_column_id: "link2"
+    target_column_id: "link2"
+    merge_strategy: "only_if_empty"
+
+  # link92
+  - source_column_id: "link92"
+    target_column_id: "link92"
+    merge_strategy: "only_if_empty"
+
+  # link_1
+  - source_column_id: "link_1"
+    target_column_id: "link_1"
+    merge_strategy: "only_if_empty"
+
+  # link_19
+  - source_column_id: "link_19"
+    target_column_id: "link_19"
+    merge_strategy: "only_if_empty"
+
+  # color3
+  - source_column_id: "color3"
+    target_column_id: "color3"
+    merge_strategy: "only_if_empty"
+
+  # status_13
+  - source_column_id: "status_13"
+    target_column_id: "status_13"
+    merge_strategy: "only_if_empty"
+
+  # text4__1
+  - source_column_id: "text4__1"
+    target_column_id: "text4__1"
+    merge_strategy: "only_if_empty"
+
+  # drop_down63
+  - source_column_id: "drop_down63"
+    target_column_id: "drop_down63"
+    merge_strategy: "only_if_empty"
+
+  # link__1
+  - source_column_id: "link__1"
+    target_column_id: "link__1"
+    merge_strategy: "only_if_empty"
+
+
+  # Title match: Gültig: Ausweis
+  - source_column_id: "date_mkpe4j1"
+    target_column_id: "date_mkpezdwy"
+    merge_strategy: "only_if_empty"
+
+  # Title match: Gültig: Aufenthalt
+  - source_column_id: "date_mkpe7vkr"
+    target_column_id: "date_mkpe9h7e"
+    merge_strategy: "only_if_empty"
+
+  # Title match: 📝 Terminliste
+  - source_column_id: "link_to_1__terminliste1__1"
+    target_column_id: "link_to_1__terminliste3__1"
+    merge_strategy: "only_if_empty"
+
+ # Title match: JSON komplett
+  - source_column_id: "file_mkt5cp4n"
+    target_column_id: "file_mkyf5vg7"
+    merge_strategy: "only_if_empty"
+
+ # Title match: Sonstiges
+  - source_column_id: "file_mkt5dta1"
+    target_column_id: "file_mkyf4hh2"
+    merge_strategy: "only_if_empty"    
+
+# Title match: Profilbild
+  - source_column_id: "file_mkt897mp"
+    target_column_id: "file_mkyfngsa"
+    merge_strategy: "only_if_empty"    
+
+
+  # Title match: Städte
+  - source_column_id: "dropdown_mkw47p9"
+    target_column_id: "dropdown_mktzhhr0"
+    merge_strategy: "only_if_empty"
+
+  # Title match: ➡️ Jobs
+  - source_column_id: "dropdown_mkws141v"
+    target_column_id: "dropdown_mkw47xff"
+    merge_strategy: "only_if_empty"
+
+  # Title match: 🔗-Lebenslauf
+  - source_column_id: "link_mky819zm"
+    target_column_id: "link_mky8cx97"
+    merge_strategy: "only_if_empty"
+
+  # nationalitaeten
+  - source_column_id: "board_relation_mkp5a6pe"
+    target_column_id: "board_relation_mkp53qvf"
+    merge_strategy: "only_if_empty"
+
+  # Title match: 🕑 Stunden (mit Wert-Transformation)
+  - source_column_id: "drop_down_14"
+    target_column_id: "dropdown_mktz35sa"
+    transform: "map_hours"
+    merge_strategy: "only_if_empty"
+
+  # Title match: 💬 Sprachen (mit Wert-Transformation)
+  - source_column_id: "dropdown_mktvcvrv"
+    target_column_id: "dropdown_mktzdxvj"
+    transform: "map_languages"
+    merge_strategy: "only_if_empty"
+
+  # Familienstand
+  - source_column_id: "dropdown_mktvv9h8"
+    target_column_id: "dropdown_mkz7aqnr"
+    merge_strategy: "only_if_empty"
+
+  # Kinder (Text zu Zahl)
+  - source_column_id: "text_mkv6jasp"
+    target_column_id: "numeric_mkz7pmaq"
+    transform: "parse_number"
+    merge_strategy: "only_if_empty"
+
+  # Geburtsland (Text zu Dropdown)
+  - source_column_id: "text_mktv4e5t"
+    target_column_id: "dropdown_mkz7x678"
+    transform: "map_country"
+    merge_strategy: "only_if_empty"
+
+# Columns to skip (don't transfer)
+skip_columns:
+  - "color_mktve1f6"
+
+# Column transformations
+transformations:
+  parse_salary:
+    description: "Parse salary from text format (e.g., '€ 45.000' -> 45000)"
+    function: "parse_salary_text_to_number"
+  
+  map_hours:
+    description: "Map hours from HR4You format to target format"
+    value_mapping:
+      "Teilzeit (25 - 35 Stunden)": "Teilzeit (25 - 35h)"
+      "Vollzeit (35 - 40 Stunden)": "Vollzeit (35 - 40h)"
+      "Teilzeit (15 - 25 Stunden)": "Teilzeit (15 - 25h)"
+      # Minijob und Schicht bis 22 Uhr haben keine Entsprechung im Target
+
+  map_languages:
+    description: "Map languages from HR4You format to target format"
+    value_mapping:
+      # Direkte Übereinstimmungen
+      "Dänisch": "Dänisch"
+      "Deutsch": "Deutsch"
+      "Kroatisch": "Kroatisch"
+      "Spanisch": "Spanisch"
+      "Norwegisch": "Norwegisch"
+      "Bulgarisch": "Bulgarisch"
+      "Rumänisch": "Rumänisch"
+      "Tschechisch": "Tschechisch"
+      "Polnisch": "Polnisch"
+      "Schwedisch": "Schwedisch"
+      "Englisch": "Englisch"
+      "Slowenisch": "Slowenisch"
+      "Bosnisch": "Bosnisch"
+      "Ukrainisch": "Ukrainisch"
+      "Griechisch": "Griechisch"
+      "Französisch": "Französisch"
+      "Albanisch": "Albanisch"
+      "Russisch": "Russisch"
+      "Japanisch": "Japanisch"
+      "Slowakisch": "Slowakisch"
+      "Niederländisch": "Niederländisch"
+      "Türkisch": "Türkisch"
+      "Portugiesisch": "Portugiesisch"
+      "Serbisch": "Serbisch"
+      "Ungarisch": "Ungarisch"
+      "Italienisch": "Italienisch"
+      "Arabisch": "Arabisch"
+      # Anpassungen nötig
+      "Indisch": "Hindi"
+      "Serbo-Kroatisch": "Serbisch"
+      "Chinesisch": "Chinesisch / Mandarin"
+      "Thailändisch": "Thai"
+      # Keine Entsprechung: Lettisch, Vietnamesisch, Persisch
+
+  parse_number:
+    description: "Parse number from text field"
+    function: "parse_text_to_number"
+
+  map_country:
+    description: "Map country names from text to dropdown labels"
+    value_mapping:
+      # Normalisierungen (case-insensitive matching in code)
+      "deutschland": "Deutschland"
+      "österreich": "Österreich"
+      "schweiz": "Schweiz"
+      "türkei": "Türkei"
+      "usa": "USA"
+      "großbritanien": "Großbritannien"
+      "großbritannien": "Großbritannien"
+      "tschechische republik": "Tschechien"
+      "madzedonien": "Mazedonien"
+      # Direkte Mappings werden im Code case-insensitive gemacht
