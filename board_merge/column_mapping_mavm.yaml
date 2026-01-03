@@ -2,6 +2,10 @@ mappings:
 - source_column_id: name
   target_column_id: name
   merge_strategy: only_if_empty
+# Kündigungsfrist
+- source_column_id: status
+  target_column_id: status
+  merge_strategy: only_if_empty
 - source_column_id: status_130
   target_column_id: status_130
   merge_strategy: only_if_empty

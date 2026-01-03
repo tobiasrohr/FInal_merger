@@ -102,7 +102,7 @@ board_merge/
 - `skip`: Überspringen
 
 ### Transformationen
-- `parse_salary`: Text → Zahl (z.B. "€ 45.000" → 45000)
+- `parse_salary`: Text → Zahl (z.B. "€ 45.000" → 45000, "100K" → 100000)
 
 ### Rate Limiting
 - Automatisches Handling von 429-Fehlern

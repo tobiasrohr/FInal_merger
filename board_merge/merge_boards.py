@@ -14,6 +14,7 @@ import json
 import yaml
 import time
 import re
+import math
 import tempfile
 import requests
 from datetime import datetime
@@ -26,6 +27,7 @@ SOURCE_BOARD_ID = "9661290405"
 TARGET_BOARD_ID = "3567618324"
 MAVM_BOARD_ID = "7076404604"  # Board 2. MA/VM
 NEW_GROUP_ID = "group_mkz7xyf0"  # Gruppe "Neu" im Quellboard für neue Items
+SOURCE_DUPLICATE_RELATION_COLUMN_ID = "board_relation_mkz88sa1"  # Connect-Board-Spalte zum Verlinken von Duplikaten
 
 # Mapping files per target board
 BOARD_MAPPING_FILES = {
@@ -36,40 +38,280 @@ BOARD_MAPPING_FILES = {
 # Batch size for mutations (Monday.com limit is 50)
 BATCH_SIZE = 50
 
+# City coordinates for nearest city calculation (lat, lng)
+CITY_COORDINATES = {
+    "Aachen": (50.7753, 6.0839),
+    "Aalen": (48.8378, 10.0933),
+    "Abensberg": (48.8167, 11.85),
+    "Abstatt": (49.0667, 9.3),
+    "Altomünster": (48.3833, 11.25),
+    "Altötting": (48.2269, 12.6758),
+    "Amberg": (49.4403, 11.8633),
+    "Aschaffenburg": (49.9769, 9.158),
+    "Augsburg": (48.3705, 10.8978),
+    "Bad Saulgau": (48.0167, 9.5),
+    "Bad Waldsee": (47.9203, 9.7536),
+    "Bad Wiessee": (47.7133, 11.7133),
+    "Baden-Baden": (48.7606, 8.2408),
+    "Bamberg": (49.8988, 10.9028),
+    "Bayreuth": (49.9456, 11.5713),
+    "Berlin": (52.52, 13.405),
+    "Bielefeld": (52.0302, 8.5325),
+    "Bocholt": (51.8392, 6.6178),
+    "Bochum": (51.4818, 7.2162),
+    "Bonn": (50.7374, 7.0982),
+    "Braunschweig": (52.2689, 10.5268),
+    "Bremen": (53.0793, 8.8017),
+    "Burghausen": (48.1692, 12.8314),
+    "Chemnitz": (50.8278, 12.9214),
+    "Cottbus": (51.7563, 14.3329),
+    "Dachau": (48.2603, 11.4342),
+    "Darmstadt": (49.8728, 8.6512),
+    "Deggendorf": (48.8417, 12.9583),
+    "Dießen am Ammersee": (47.95, 11.1),
+    "Dingolfing": (48.6333, 12.5),
+    "Dorfen": (48.2703, 12.1608),
+    "Dortmund": (51.5136, 7.4653),
+    "Dresden": (51.0504, 13.7373),
+    "Duisburg": (51.4344, 6.7623),
+    "Düsseldorf": (51.2277, 6.7735),
+    "Eggenfelden": (48.4028, 12.7628),
+    "Erding": (48.3064, 11.9069),
+    "Erfurt": (50.9848, 11.0299),
+    "Erlangen": (49.5897, 11.0078),
+    "Eschborn": (50.1431, 8.5706),
+    "Essen": (51.4556, 7.0116),
+    "Frankfurt": (50.1109, 8.6821),
+    "Freiburg": (47.999, 7.8421),
+    "Freising": (48.4028, 11.7489),
+    "Friedrichshafen": (47.65, 9.4833),
+    "Fürstenfeldbruck": (48.1789, 11.255),
+    "Fürth": (49.4774, 10.9886),
+    "Garbsen": (52.4181, 9.5989),
+    "Garmisch-Partenkirchen": (47.5, 11.0833),
+    "Gelsenkirchen": (51.5177, 7.0857),
+    "Gilching": (48.1053, 11.2942),
+    "Görlitz": (51.1528, 14.9872),
+    "Gütersloh": (51.9032, 8.3858),
+    "Halle (Saale)": (51.4969, 11.9688),
+    "Hamburg": (53.5511, 9.9937),
+    "Hamm": (51.6739, 7.815),
+    "Hannover": (52.3759, 9.732),
+    "Heidelberg": (49.3988, 8.6724),
+    "Heidenheim": (48.6761, 10.1544),
+    "Heilbronn": (49.1427, 9.2109),
+    "Immenstaad am Bodensee": (47.6667, 9.3667),
+    "Ingolstadt": (48.7665, 11.4258),
+    "Itzehoe": (53.925, 9.5153),
+    "Jena": (50.9271, 11.5892),
+    "Karlsruhe": (49.0069, 8.4037),
+    "Kassel": (51.3127, 9.4797),
+    "Kaufbeuren": (47.8803, 10.6222),
+    "Kempten": (47.7267, 10.3153),
+    "Kiel": (54.3233, 10.1228),
+    "Kirchheim Unter Teck": (48.6472, 9.4528),
+    "Kirchseeon": (48.0728, 11.8836),
+    "Koblenz": (50.3569, 7.589),
+    "Konstanz": (47.6779, 9.1732),
+    "Krefeld": (51.3388, 6.5853),
+    "Köln": (50.9375, 6.9603),
+    "Landsberg am Lech": (48.0525, 10.8792),
+    "Landshut": (48.5372, 12.1519),
+    "Leipzig": (51.3397, 12.3731),
+    "Leverkusen": (51.0459, 6.9844),
+    "Lindau": (47.546, 9.684),
+    "London": (51.5074, -0.1278),
+    "Los Angeles": (34.0522, -118.2437),
+    "Ludwigshafen": (49.4774, 8.4452),
+    "Lübeck": (53.8655, 10.6866),
+    "Lüdenscheid": (51.2167, 7.6333),
+    "Magdeburg": (52.1205, 11.6276),
+    "Mainz": (49.9929, 8.2473),
+    "Mannheim": (49.4875, 8.466),
+    "Montabaur": (50.4375, 7.8256),
+    "Mönchengladbach": (51.1805, 6.4428),
+    "Mühldorf am Inn": (48.2453, 12.5225),
+    "Mühlheim an der Ruhr": (51.4275, 6.8825),
+    "München": (48.1351, 11.582),
+    "Münster": (51.9607, 7.6261),
+    "New York": (40.7128, -74.006),
+    "Nürnberg": (49.4521, 11.0767),
+    "Offenbach": (50.0956, 8.7761),
+    "Oldenburg": (53.1435, 8.2146),
+    "Osnabrück": (52.2799, 8.0472),
+    "Paderborn": (51.7189, 8.7575),
+    "Paris": (48.8566, 2.3522),
+    "Passau": (48.5667, 13.4319),
+    "Pforzheim": (48.8922, 8.6989),
+    "Potsdam": (52.3906, 13.0645),
+    "Radolfzell": (47.7369, 8.97),
+    "Ravensburg": (47.7823, 9.612),
+    "Regensburg": (49.0134, 12.1016),
+    "Reutlingen": (48.4914, 9.2043),
+    "Rohrdorf": (47.7833, 12.1667),
+    "Rosenheim": (47.8561, 12.1289),
+    "Rostock": (54.0924, 12.0991),
+    "Saalfeld": (50.6483, 11.3644),
+    "Saarbrücken": (49.2402, 6.9969),
+    "Saint-Quen": (48.9119, 2.3336),
+    "San Clemente": (33.427, -117.612),
+    "San Francisco": (37.7749, -122.4194),
+    "Scheidegg": (47.5833, 9.85),
+    "Schweinfurt": (50.0492, 10.2268),
+    "Schwerin": (53.6355, 11.4012),
+    "Singen": (47.7597, 8.8403),
+    "Solingen": (51.1652, 7.0671),
+    "Straubing": (48.8817, 12.5731),
+    "Stuttgart": (48.7758, 9.1829),
+    "Taufkirchen (Vils)": (48.35, 12.1333),
+    "Thüringen": (50.9, 11.05),
+    "Traunstein": (47.8683, 12.6433),
+    "Tübingen": (48.5216, 9.0576),
+    "Ulm": (48.4011, 9.9876),
+    "Verden": (52.9231, 9.2336),
+    "Villingen-Schweningen": (48.0603, 8.4575),
+    "Weilheim": (47.8397, 11.1422),
+    "Weimar": (50.9795, 11.3235),
+    "Wendelstein": (49.3517, 11.1536),
+    "Wien": (48.2082, 16.3738),
+    "Wiesbaden": (50.0782, 8.2398),
+    "Wolfratshausen": (47.9133, 11.4217),
+    "Wolfsburg": (52.4227, 10.7865),
+    "Wuppertal": (51.2562, 7.1508),
+    "Würzburg": (49.7913, 9.9534),
+}
+
 
 class ColumnConverter:
     """Handles column value transformations."""
     
     @staticmethod
     def parse_salary_text_to_number(text: str) -> Optional[float]:
-        """Parse salary from text format (e.g., '€ 45.000' -> 45000)."""
+        """Parse salary from text format (e.g., '€ 45.000' -> 45000, '100K' -> 100000)."""
         if not text:
             return None
         
-        # Remove currency symbols and spaces
-        cleaned = re.sub(r'[€$£,\s]', '', text)
+        # Remove currency symbols only (keep comma for decimal parsing in K pattern)
+        cleaned = re.sub(r'[€$£]', '', text)
         
         candidates = []
         
-        # Try to find numbers with dots as thousand separators (e.g., "45.000")
+        # Pattern 1: Numbers with K/k suffix (e.g., "100K", "100k", "85K", "75,5K")
+        # This handles cases like "ca. 100K in VZ" -> 100000
+        # Match number (with optional decimal via . or ,) followed by K/k
+        k_pattern = r'(\d+(?:[.,]\d+)?)\s*[Kk](?![a-zA-Z])'
+        k_matches = re.findall(k_pattern, cleaned)
+        for match in k_matches:
+            # Replace comma with dot for decimal parsing
+            number_str = match.replace(',', '.')
+            # Multiply by 1000 for K suffix
+            candidates.append(float(number_str) * 1000)
+        
+        # Now remove commas and extra spaces for other patterns
+        cleaned_no_comma = re.sub(r'[,\s]', '', cleaned)
+        
+        # Pattern 2: Numbers with dots as thousand separators (e.g., "45.000")
         dot_pattern = r'(\d{1,3}(?:\.\d{3})+)'
-        dot_matches = re.findall(dot_pattern, cleaned)
+        dot_matches = re.findall(dot_pattern, cleaned_no_comma)
         for match in dot_matches:
             # Remove dots and convert
             number_str = match.replace('.', '')
             candidates.append(float(number_str))
         
-        # Also extract plain numbers (without dots)
-        numbers = re.findall(r'\d+', cleaned)
+        # Pattern 3: Plain numbers (without dots or K suffix)
+        # Only add if not already covered by patterns above
+        numbers = re.findall(r'\d+', cleaned_no_comma)
         for num_str in numbers:
-            # Only add if it's not part of a dot-separated number we already found
-            if not any(num_str in match.replace('.', '') for match in dot_matches):
+            # Skip if this number was part of a K-pattern match
+            is_k_number = any(num_str in match.replace(',', '.').replace('.', '') for match in k_matches)
+            # Skip if this number was part of a dot-pattern match
+            is_dot_number = any(num_str in match.replace('.', '') for match in dot_matches)
+            
+            if not is_k_number and not is_dot_number:
                 candidates.append(float(num_str))
         
         if candidates:
             # Return the largest number (likely the salary)
             return max(candidates)
         
+        return None
+    
+    @staticmethod
+    def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+        """
+        Calculate the great-circle distance between two points on Earth using the Haversine formula.
+        
+        Args:
+            lat1, lon1: Coordinates of point 1 (in degrees)
+            lat2, lon2: Coordinates of point 2 (in degrees)
+            
+        Returns:
+            Distance in kilometers
+        """
+        R = 6371  # Earth's radius in kilometers
+        
+        # Convert to radians
+        lat1_rad = math.radians(lat1)
+        lat2_rad = math.radians(lat2)
+        delta_lat = math.radians(lat2 - lat1)
+        delta_lon = math.radians(lon2 - lon1)
+        
+        # Haversine formula
+        a = math.sin(delta_lat / 2) ** 2 + math.cos(lat1_rad) * math.cos(lat2_rad) * math.sin(delta_lon / 2) ** 2
+        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+        
+        return R * c
+    
+    @staticmethod
+    def find_nearest_city(lat: float, lng: float) -> Optional[str]:
+        """
+        Find the nearest city from CITY_COORDINATES based on Haversine distance.
+        
+        Args:
+            lat: Latitude of the location
+            lng: Longitude of the location
+            
+        Returns:
+            Name of the nearest city, or None if no cities available
+        """
+        if not CITY_COORDINATES:
+            return None
+        
+        nearest_city = None
+        min_distance = float('inf')
+        
+        for city_name, (city_lat, city_lng) in CITY_COORDINATES.items():
+            distance = ColumnConverter.haversine_distance(lat, lng, city_lat, city_lng)
+            if distance < min_distance:
+                min_distance = distance
+                nearest_city = city_name
+        
+        return nearest_city
+    
+    @staticmethod
+    def extract_location_from_item(item: Dict, location_col_id: str) -> Optional[Tuple[float, float]]:
+        """
+        Extract lat/lng coordinates from a location column value.
+        
+        Args:
+            item: Item data containing column_values
+            location_col_id: ID of the location column
+            
+        Returns:
+            Tuple of (lat, lng) or None if not available
+        """
+        for col_val in item.get("column_values", []):
+            if col_val.get("id") == location_col_id:
+                value = col_val.get("value")
+                if value:
+                    try:
+                        parsed = json.loads(value) if isinstance(value, str) else value
+                        lat = parsed.get("lat")
+                        lng = parsed.get("lng")
+                        if lat is not None and lng is not None:
+                            return (float(lat), float(lng))
+                    except:
+                        pass
         return None
     
     @staticmethod
@@ -287,7 +529,7 @@ class ColumnConverter:
                 return ColumnConverter.gender_to_salutation(item, gender_col)
             return None
         
-        elif transform_name in ("map_hours", "map_languages"):
+        elif transform_name in ("map_hours", "map_languages", "map_familienstand", "map_nationalitaet"):
             # These transformations use value_mapping from the transformations config
             if item and mapping and transformations:
                 source_col_id = mapping.get("source_column_id")
@@ -335,6 +577,19 @@ class ColumnConverter:
                     return ColumnConverter.map_country_text_to_label(
                         item, source_col_id, value_mapping, valid_countries
                     )
+            return None
+        
+        elif transform_name == "map_nearest_city":
+            # Map location coordinates to nearest city dropdown label
+            if item and mapping:
+                source_col_id = mapping.get("source_column_id")
+                if source_col_id:
+                    coords = ColumnConverter.extract_location_from_item(item, source_col_id)
+                    if coords:
+                        lat, lng = coords
+                        nearest_city = ColumnConverter.find_nearest_city(lat, lng)
+                        if nearest_city:
+                            return [nearest_city]  # Return as list for dropdown
             return None
         
         return value
@@ -591,6 +846,47 @@ class BoardMerger:
                 "error": str(e)
             })
             return False
+    
+    def link_source_to_duplicate(self, source_item_id: str, duplicate_item_id: str) -> bool:
+        """
+        Link source item to the found duplicate via board-relation column.
+        
+        Sets the Connect-Board column on the SOURCE item to point to the duplicate
+        item in the target board (Bewerberliste or 2. MA/VM).
+        
+        Args:
+            source_item_id: ID of the item in the source board
+            duplicate_item_id: ID of the duplicate item in the target board
+            
+        Returns:
+            True if successful, False otherwise
+        """
+        # Build the value for board-relation column (overwrite mode)
+        relation_value = json.dumps({"item_ids": [int(duplicate_item_id)]})
+        
+        success = self.update_single_column(
+            source_item_id,
+            SOURCE_BOARD_ID,
+            SOURCE_DUPLICATE_RELATION_COLUMN_ID,
+            relation_value
+        )
+        
+        if success:
+            self.log_entries.append({
+                "action": "link_duplicate",
+                "source_item_id": source_item_id,
+                "duplicate_item_id": duplicate_item_id,
+                "column_id": SOURCE_DUPLICATE_RELATION_COLUMN_ID
+            })
+        else:
+            self.log_entries.append({
+                "action": "link_duplicate_error",
+                "source_item_id": source_item_id,
+                "duplicate_item_id": duplicate_item_id,
+                "column_id": SOURCE_DUPLICATE_RELATION_COLUMN_ID
+            })
+        
+        return success
             
     def create_update(self, item_id: str, body: str):
         """Create an update (comment) on an item."""
@@ -975,7 +1271,7 @@ class BoardMerger:
                     col_type = "numbers"
                 elif transform == "gender_to_salutation":
                     col_type = "dropdown"
-                elif transform in ("map_hours", "map_languages", "map_country"):
+                elif transform in ("map_hours", "map_languages", "map_country", "map_familienstand", "map_nearest_city", "map_nationalitaet"):
                     col_type = "dropdown"
                 elif transform == "parse_number":
                     col_type = "numbers"
@@ -1056,12 +1352,21 @@ class BoardMerger:
             
             # Set email columns separately
             for email_info in email_columns:
-                self.update_single_column(
+                success = self.update_single_column(
                     new_item_id, 
                     TARGET_BOARD_ID,
                     email_info["target_col_id"],
                     json.dumps({"email": email_info["email"], "text": email_info["email"]})
                 )
+                if not success:
+                    self.log_entries.append({
+                        "action": "email_transfer_failed",
+                        "source_item_id": item.get("id"),
+                        "target_item_id": new_item_id,
+                        "item_name": item_name,
+                        "email": email_info["email"],
+                        "column_id": email_info["target_col_id"]
+                    })
             
             return new_item_id
             
@@ -1157,8 +1462,8 @@ class BoardMerger:
                     })
                 continue
             
-            # Special handling for map_hours and map_languages transformations
-            if transform in ("map_hours", "map_languages"):
+            # Special handling for map_hours, map_languages, map_familienstand, map_nearest_city, and map_nationalitaet transformations
+            if transform in ("map_hours", "map_languages", "map_familienstand", "map_nearest_city", "map_nationalitaet"):
                 target_col_type = "dropdown"  # Both are dropdown columns
                 dummy_col_val = {"id": source_col_id, "text": "", "value": ""}
                 column_value = self.prepare_column_value(
@@ -1294,6 +1599,9 @@ class BoardMerger:
                 if self.move_item_to_group(source_item_id, SOURCE_BOARD_ID, self.duplicate_group_id):
                     self.stats["moved_duplicates"] += 1
             
+            # Link source item to the found duplicate via board-relation column
+            self.link_source_to_duplicate(source_item_id, target_item_id)
+            
             # Update existing item in target board
             self.update_item(target_item_id, item, mappings, target_board_id)
             
@@ -1319,6 +1627,9 @@ class BoardMerger:
                 if self.new_group_id:
                     if self.move_item_to_group(source_item_id, SOURCE_BOARD_ID, self.new_group_id):
                         self.stats["moved_new"] += 1
+                
+                # Link source item to the newly created item via board-relation column
+                self.link_source_to_duplicate(source_item_id, new_item_id)
                 
                 # Transfer updates
                 self.transfer_updates(item, new_item_id)

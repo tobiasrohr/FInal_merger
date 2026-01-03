@@ -13,9 +13,9 @@ mappings:
     target_column_id: "link"
     merge_strategy: "only_if_empty"
 
-  # status
+  # Kündigungsfrist
   - source_column_id: "status"
-    target_column_id: "status"
+    target_column_id: "color_mktnfvyw"
     merge_strategy: "only_if_empty"
 
   # status_130
@@ -103,9 +103,10 @@ mappings:
     target_column_id: "text9"
     merge_strategy: "only_if_empty"
 
-  # drop_down_1
+  # drop_down_1 (Nationalität - Label-basiertes Mapping wegen ID-Unterschieden)
   - source_column_id: "drop_down_1"
     target_column_id: "drop_down_1"
+    transform: "map_nationalitaet"
     merge_strategy: "only_if_empty"
 
   # drop_down_15
@@ -240,9 +241,10 @@ mappings:
     merge_strategy: "only_if_empty"    
 
 
-  # Title match: Städte
-  - source_column_id: "dropdown_mkw47p9"
+  # Title match: Städte (aus Wohnort-Koordinaten die nächste Stadt berechnen)
+  - source_column_id: "standort"
     target_column_id: "dropdown_mktzhhr0"
+    transform: "map_nearest_city"
     merge_strategy: "only_if_empty"
 
   # Title match: ➡️ Jobs
@@ -272,9 +274,10 @@ mappings:
     transform: "map_languages"
     merge_strategy: "only_if_empty"
 
-  # Familienstand
+  # Familienstand (mit Wert-Transformation wegen unterschiedlicher IDs)
   - source_column_id: "dropdown_mktvv9h8"
     target_column_id: "dropdown_mkz7aqnr"
+    transform: "map_familienstand"
     merge_strategy: "only_if_empty"
 
   # Kinder (Text zu Zahl)
@@ -296,8 +299,12 @@ skip_columns:
 # Column transformations
 transformations:
   parse_salary:
-    description: "Parse salary from text format (e.g., '€ 45.000' -> 45000)"
+    description: "Parse salary from text format (e.g., '€ 45.000' -> 45000, '100K' -> 100000)"
     function: "parse_salary_text_to_number"
+
+  map_nearest_city:
+    description: "Map location coordinates to nearest city using Haversine distance"
+    function: "find_nearest_city"
   
   map_hours:
     description: "Map hours from HR4You format to target format"
@@ -363,3 +370,99 @@ transformations:
       "tschechische republik": "Tschechien"
       "madzedonien": "Mazedonien"
       # Direkte Mappings werden im Code case-insensitive gemacht
+
+  map_familienstand:
+    description: "Map Familienstand from source to target (IDs are different)"
+    value_mapping:
+      # Source ID -> Target Label (die IDs sind um 1 verschoben)
+      "ledig": "ledig"
+      "verheiratet": "verheiratet"
+      "getrennt lebend": "getrennt lebend"
+      "geschieden": "geschieden"
+
+  map_nationalitaet:
+    description: "Map Nationalität labels (IDs differ between boards)"
+    value_mapping:
+      # 1:1 Mapping über Label-Namen statt IDs
+      "Deutschland": "Deutschland"
+      "Estland": "Estland"
+      "Bosnien und Herzegowina": "Bosnien und Herzegowina"
+      "Serbien": "Serbien"
+      "Ungarn": "Ungarn"
+      "Kosovo": "Kosovo"
+      "Rumänien": "Rumänien"
+      "Ukraine": "Ukraine"
+      "Griechenland": "Griechenland"
+      "Indien": "Indien"
+      "Kroatien": "Kroatien"
+      "Tschechische Republik": "Tschechische Republik"
+      "Frankreich": "Frankreich"
+      "Spanien": "Spanien"
+      "Türkei": "Türkei"
+      "Togo": "Togo"
+      "Georgien": "Georgien"
+      "Madzedonien": "Madzedonien"
+      "Bulgarien": "Bulgarien"
+      "Israel": "Israel"
+      "Irland": "Irland"
+      "Albanien": "Albanien"
+      "Afghanistan": "Afghanistan"
+      "Italien": "Italien"
+      "Österreich": "Österreich"
+      "Schweiz": "Schweiz"
+      "Portugal": "Portugal"
+      "Polen": "Polen"
+      "Slowenien": "Slowenien"
+      "Slowakei": "Slowakei"
+      "Kongo": "Kongo"
+      "Neuseeland": "Neuseeland"
+      "Aserbaidschan": "Aserbaidschan"
+      "Niederlande": "Niederlande"
+      "Lettland": "Lettland"
+      "Mexiko": "Mexiko"
+      "Tunesien": "Tunesien"
+      "Brasilien": "Brasilien"
+      "Mongolei": "Mongolei"
+      "Benin": "Benin"
+      "Jordanien": "Jordanien"
+      "Irak": "Irak"
+      "Taiwan": "Taiwan"
+      "Ecuador": "Ecuador"
+      "Nigeria": "Nigeria"
+      "Senegal": "Senegal"
+      "Dominikanische Republik": "Dominikanische Republik"
+      "Kamerun": "Kamerun"
+      "USA": "USA"
+      "Äthiopien": "Äthiopien"
+      "Ägypten": "Ägypten"
+      "Argentinien": "Argentinien"
+      "China": "China"
+      "Iran": "Iran"
+      "Japan": "Japan"
+      "Kasachstan": "Kasachstan"
+      "Kolumbien": "Kolumbien"
+      "Marokko": "Marokko"
+      "Pakistan": "Pakistan"
+      "Syrien": "Syrien"
+      "Großbritanien": "Großbritanien"
+      "Algerien": "Algerien"
+      "Südafrika": "Südafrika"
+      "Kapverden": "Kapverden"
+      "Angola": "Angola"
+      "Armenien": "Armenien"
+      "Thailand": "Thailand"
+      "Russland": "Russland"
+      "Weißrussland": "Weißrussland"
+      "Belgien": "Belgien"
+      "Kuba": "Kuba"
+      "Eritrea": "Eritrea"
+      "Usbekistan": "Usbekistan"
+      "Sudan": "Sudan"
+      "Zypern": "Zypern"
+      "Nicaragua": "Nicaragua"
+      "Litauen": "Litauen"
+      "Ghana": "Ghana"
+      "Somalia": "Somalia"
+      "Jemen": "Jemen"
+      "Norwegen": "Norwegen"
+      "Schweden": "Schweden"
